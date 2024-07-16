@@ -46,11 +46,12 @@ def main():
             elif choice == '4':
                 print(f"{num1} / {num2} = {divide(num1, num2)}")
 
-            if __name__ == "__main__":
-    main()
-
             next_calculation = input("Deseja realizar outra operação? (S/N): ")
             if next_calculation.lower() != 'S':
                 break
         else:
             print("Opção inválida. Tente novamente.")
+
+
+if __name__ == "__main__":
+    main()
