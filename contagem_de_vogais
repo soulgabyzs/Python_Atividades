@@ -1,0 +1,21 @@
+def contar_vogais(s):
+    """Função para contar o número de vogais em uma string"""
+    vogais = 'aeiouAEIOU'
+    contador = 0
+    for char in s:
+        if char in vogais:
+            contador += 1
+    return contador
+
+def main():
+    while True:
+        string = input("Digite uma string para contar o número de vogais: ")
+        num_vogais = contar_vogais(string)
+        print(f"A string '{string}' contém {num_vogais} vogais.")
+        
+        next_check = input("Deseja contar as vogais de outra string? (S/N): ")
+        if next_check.lower() != 'S':
+            break
+
+if __name__ == "__main__":
+    main()
