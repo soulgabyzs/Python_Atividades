@@ -27,7 +27,7 @@ def main():
     print("6 - Kelvin para Fahrenheit")
 
     while True:
-        choice = input("Digite sua escolha (1/2/3/4/5/6): ")
+        choice = input("Digite sua escolha (1,2,3,4,5 OU 6): ")
 
         if choice in ['1', '2', '3', '4', '5', '6']:
             temp = float(input("Digite a temperatura a ser convertida: "))
@@ -50,8 +50,8 @@ def main():
             elif choice == '6':
                 print(f"{temp}K = {kelvin_to_fahrenheit(temp)}°F")
             
-            next_conversion = input("Deseja realizar outra conversão? (s/n): ")
-            if next_conversion.lower() != 's':
+            next_conversion = input("Deseja realizar outra conversão? (S/N): ")
+            if next_conversion.lower() != 'S':
                 break
         else:
             print("Opção inválida. Tente novamente.")
