@@ -1,0 +1,30 @@
+def converter_moeda(quantia, taxa_cambio):
+    """
+    Função para converter uma quantia de uma moeda para outra
+    com base em uma taxa de câmbio fornecida.
+
+    Args:
+    quantia (float): A quantia de dinheiro a ser convertida.
+    taxa_cambio (float): A taxa de câmbio de conversão.
+
+    Returns:
+    float: A quantia convertida.
+    """
+    return quantia * taxa_cambio
+
+
+def main():
+    while True:
+        quantia = float(input("Digite a quantia de dinheiro a ser convertida: "))
+        taxa_cambio = float(input("Digite a taxa de câmbio: "))
+
+        quantia_convertida = converter_moeda(quantia, taxa_cambio)
+        print(f"A quantia convertida é: {quantia_convertida:.2f}")
+
+        realizar_outra_conversao = input("Deseja realizar outra conversão? (S/N): ")
+        if realizar_outra_conversao.lower() != 'S':
+            break
+
+
+if __name__ == "__main__":
+    main()
