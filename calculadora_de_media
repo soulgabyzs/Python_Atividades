@@ -1,0 +1,22 @@
+def calcular_media(numeros):
+    """Função para calcular a média de uma lista de números"""
+    if not numeros:
+        return 0
+    return sum(numeros) / len(numeros)
+
+def main():
+    while True:
+        # Solicita ao usuário para digitar uma lista de números separados por espaço
+        numeros = input("Digite uma lista de números separados por espaço: ")
+        # Converte a string de entrada em uma lista de floats
+        numeros_lista = list(map(float, numeros.split()))
+        
+        media = calcular_media(numeros_lista)
+        print(f"A média dos números fornecidos é: {media}")
+        
+        next_calculation = input("Deseja calcular a média de outra lista? (S/N): ")
+        if next_calculation.lower() != 'S':
+            break
+
+if __name__ == "__main__":
+    main()
