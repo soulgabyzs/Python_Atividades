@@ -1,0 +1,28 @@
+def eh_primo(numero):
+    """Função para verificar se um número é primo"""
+    if numero <= 1:
+        return False
+    elif numero == 2:
+        return True
+    elif numero % 2 == 0:
+        return False
+    
+    for i in range(3, int(numero**0.5) + 1, 2):
+        if numero % i == 0:
+            return False
+    return True
+
+def main():
+    while True:
+        numero = int(input("Digite um número para verificar se é primo: "))
+        if eh_primo(numero):
+            print(f"O número {numero} é primo.")
+        else:
+            print(f"O número {numero} não é primo.")
+        
+          verificar_outro = input("Deseja verificar outro número? (S/N): ")
+          if verificar_outro.lower() != 'S':
+            break
+
+if __name__ == "__main__":
+    main()
